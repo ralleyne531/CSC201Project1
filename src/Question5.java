@@ -11,15 +11,14 @@ public class Question5 {
         int high = array.length-1;
         int mid = (low + high) / 2;
         while(low <= high){
-            if(array[mid] < x){
+            if(x == array[mid]){
+                return mid;
+            }else if(array[mid] < x){
                 low = mid + 1;
             }else if(array[mid] > x){
                 high = mid - 1;
-            }else if(x == array[mid]){
-                return mid;
             }
         }
-        return -1;
     }
 
 }
